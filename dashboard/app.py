@@ -71,14 +71,32 @@ ui.page_opts(title="PyShiny Express: Live Data Example", fillable=True)
 # Sidebar is typically used for user interaction/information
 # Note the with statement to create the sidebar followed by a colon
 # Everything in the sidebar is indented consistently
-with ui.sidebar(open="open"):
-    ui.h2("Antarctic Explorer", class_="text-center")
+
+# Define the UI Layout Sidebar with background color
+with ui.sidebar(open="open", style="background-color: yellow;"):
+    
+# Header with two lines
+    with ui.h2(class_="text-center"):
+        ui.div("Pittsburgh Weather", style="font-size: 1.5em;"),
+        ui.div("Monitoring Dashboard", style="font-size: 1.5em;")
+
+# Add an icon with custom size using CSS
+    ui.div(
+    icon_svg("house"),
+    class_="text-center", 
+    style="color: blue; font-size: 100px",
+    )
+    
+# Description
     ui.p(
-        "A demonstration of real-time temperature readings in Antarctica.",
+        "Real-time temperature readings in Pittsburgh, PA",
         class_="text-center",
     )
-    ui.hr()
+    ui.hr() # Horizontal line for visual separation
+    
+# Links section
     ui.h6("Links:")
+
     ui.a(
         "GitHub Source",
         href="https://github.com/Mhamedben/cintel-05-cintel",
