@@ -20,7 +20,7 @@ from faicons import icon_svg
 # First, set a constant UPDATE INTERVAL for all live data
 # Constants are usually defined in uppercase letters
 # Use a type hint to make it clear that it's an integer (: int)
-UPDATE_INTERVAL_SECS: int = 3
+UPDATE_INTERVAL_SECS: int = 1
 
 # Initialize a REACTIVE VALUE with a common data structure
 # The reactive value is used to store state (information)
