@@ -42,7 +42,7 @@ def reactive_calc_combined():
     reactive.invalidate_later(UPDATE_INTERVAL_SECS)
 
 # Data generation logic
-    temp = round(random.uniform(-18, -16), 1)
+    temp = round(random.uniform(25, 32), 1)
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     new_dictionary_entry = {"temp":temp, "timestamp":timestamp}
 
